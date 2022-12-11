@@ -1,0 +1,96 @@
+<HEAD>
+    <script language="Javascript">
+        <!----hide--
+            var password;
+            var pass1 ="cashbook@5380";
+            password=prompt('Please enter password to enter the Cash Book',' ');
+
+            if (password==pass1)
+                alert('Welcome to the Lotus Pvt.Ltd Accounting System, Click OK to continue')
+            else {
+                window.location="index.html"
+            } 
+            -->
+    </script>
+</HEAD>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lotus Pvt.Ltd (Cash Book)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#newrow").click(function(){
+                var addcontrolls = "<tr>"
+                    addcontrolls+="<td><input type='text' name='empname'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Email'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+"</tr>";
+                    $("table tbody").append(addcontrolls)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="sub-heading">
+        <h2>Cash Book (Lotus Pvt.Ltd)</h2>
+    </div>
+    <div class="bottom-links">
+        <a href="index.html" class="print">Go Back to Main menu</a>
+        <a href="#" class="print" onclick="screenshot()">Download Account</a>
+        <a href="#" class="print lol" id="newrow">Add New Item</a>
+    </div><br><br>
+    <div class="cashbook-table">
+        <div id="ss-section">
+            <table >
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Date</th>
+                        <th style="width: 200px;">Description</th>
+                        <th style="width: 40px;">V.No</th>
+                        <th style="width: 110px;">Bank Name</th>
+                        <th style="width: 110px;">Bank Amount</th>
+                        <th style="width: 110px;">Cash Amount</th>
+                        <th style="width: 50px;">Date</th>
+                        <th style="width: 200px;">Description</th>
+                        <th style="width: 40px;">V.No</th>
+                        <th style="width: 110px;">Bank Name</th>
+                        <th style="width: 110px;">Bank Amount</th>
+                        <th style="width: 110px;">Cash Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <br><br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        function screenshot() {
+            html2canvas(document.querySelector("#ss-section")).then(canvas => {
+                document.body.appendChild(canvas)
+            });
+        }   
+    </script>
+</body>
+</html>

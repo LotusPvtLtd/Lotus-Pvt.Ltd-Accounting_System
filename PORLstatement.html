@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<HEAD>
+    <script language="Javascript">
+        <!----hide--
+            var password;
+            var pass1 ="PORL@5672";
+            password=prompt('Please enter password to enter the Profit OR Loss statement',' ');
+
+            if (password==pass1)
+                alert('Welcome to the Lotus Pvt.Ltd Accounting System, Click OK to continue')
+            else {
+                window.location="index.html"
+            } 
+            -->
+    </script>
+</HEAD>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lotus Pvt.Ltd (Profit OR Loss Statement)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#newrow").click(function(){
+                var addcontrolls = "<tr>"
+                    addcontrolls+="<td><input type='text' name='empname'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Email'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"              
+                    addcontrolls+"</tr>";
+                    $("table tbody").append(addcontrolls)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="sub-heading">
+        <h2>Profit OR Loss Statement (Lotus Pvt.Ltd)</h2>
+    </div>
+    <div class="bottom-links">
+        <a href="#" class="print">Print Document</a>
+        <a href="index.html" class="print">Go Back to Main menu</a>
+        <a href="#" class="print" onclick="screenshot()">Download Account</a>
+        <a href="#" class="print" id="newrow" style="background-color: rgb(118, 1, 1);">Add New Item</a>
+    </div><br><br>
+    <div class="cashbook-table">
+        <table id="ss-section">
+            <thead>
+                <tr>
+                    <th style="width: 120px;">Date</th>
+                    <th style="width: 500px;">Description</th>
+                    <th style="width: 300px;">Amount (Dr)</th>
+                    <th style="width: 300px;">Amount (Cr)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <br><br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        function screenshot() {
+            html2canvas(document.querySelector("#ss-section")).then(canvas => {
+                document.body.appendChild(canvas)
+            });
+        }   
+    </script>
+</body>
+</html>

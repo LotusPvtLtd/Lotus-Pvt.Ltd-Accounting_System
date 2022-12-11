@@ -1,0 +1,90 @@
+<HEAD>
+    <script language="Javascript">
+        <!----hide--
+            var password;
+            var pass1 ="pettycash@7812";
+            password=prompt('Please enter password to enter the PettyCash Book',' ');
+
+            if (password==pass1)
+                alert('Welcome to the Lotus Pvt.Ltd Accounting System, Click OK to continue')
+            else {
+                window.location="index.html"
+            } 
+            -->
+    </script>
+</HEAD>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lotus Pvt.Ltd (Petty Cash Book)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#newrow").click(function(){
+                var addcontrolls = "<tr>"
+                    addcontrolls+="<td><input type='text' name='empname'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Email'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"                 
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"              
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"              
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"              
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"              
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"              
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"              
+                    addcontrolls+="<td><input type='text' name='Salary'></td>"            
+                    addcontrolls+"</tr>";
+                    $("table tbody").append(addcontrolls)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="sub-heading">
+        <h2>Petty Cash Book (Lotus Pvt.Ltd)</h2>
+    </div>
+    <div class="bottom-links">
+        <a href="index.html" class="print">Go Back to Main menu</a>
+        <a href="#" class="print" onclick="screenshot()">Download Account</a>
+        <a href="#" class="print" id="newrow" style="background-color: rgb(118, 1, 1);">Add New Item</a>
+    </div><br><br>
+    <div class="cashbook-table">
+        <table id="ss-section">
+            <thead>
+                <tr>
+                    <th style="width: 60px;">Recipt</th>
+                    <th style="width: 60px;">Date</th>
+                    <th style="width: 140px;">Description</th>
+                    <th style="width: 60px;">V.No</th>
+                    <th style="width: 200px;">Total</th>
+                    <th style="width: 100px;">Travelling</th>
+                    <th style="width: 100px;">Stationaries</th>
+                    <th style="width: 100px;">Postage</th>
+                    <th style="width: 100px;">Cleaning</th>
+                    <th style="width: 100px;">Other</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <br><br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        function screenshot() {
+            html2canvas(document.querySelector("#ss-section")).then(canvas => {
+                document.body.appendChild(canvas)
+            });
+        }   
+    </script>
+</body>
+</html>

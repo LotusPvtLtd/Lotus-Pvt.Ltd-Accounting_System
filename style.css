@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&family=Raleway:wght@100;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&family=Raleway:wght@100;400;500;600;700;800;900&family=Roboto:wght@400;500&display=swap');
+
+input {
+    width: 90%;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    background-color: rgb(54, 138, 142);
+    height: 60px;
+    margin-top: 0;
+    color: #fff;
+    padding-top: 20px;
+    font-weight: 200;
+    width: 100%;
+}
+
+.btn-container {
+    margin-left: 420px;
+    margin-right: 420px;
+    text-align: center;
+    display: grid;
+}
+
+.btn-container .main-btn {
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(32, 32, 104);
+    padding: 20px;
+    border-radius: 20px;
+    color: aliceblue;
+    transition: .3s ease-in-out;
+}
+
+.btn-container .main-btn:hover {
+   scale: 1.1;
+}
+
+.cashbook-table table,th, td {
+    border: 0.2px solid black;
+    border-collapse: collapse;
+}
+
+.cashbook-table table {
+    font-family: 'Roboto', sans-serif;
+}
+
+.cashbook-table table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FFFF00;
+}
+
+.cashbook-table table input {
+    text-decoration: none;
+    border: none;
+}
+
+.sub-heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.bottom-links .print {
+    background-color: rgb(70, 70, 150);
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    transition: .3s ease-in-out;
+}
+
+.bottom-links a:hover {
+    background-color: rgb(45, 45, 78);
+}
+
+#newrow {
+    background-color: rgb(118, 1, 1);
+}
+
+#newrow:hover {
+    background-color: rgb(255, 65, 65);
+}
